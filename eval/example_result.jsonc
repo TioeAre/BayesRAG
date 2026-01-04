@@ -1,0 +1,95 @@
+// result
+{
+  "qa": {
+    "id": "xxx.pdf",
+    "question": "",
+    "ground_truth": "4",
+    "provenance": [95, 107],
+    "evidence_sources": [95, 107],
+    "answer_format": "Int",
+    "doc_type": "Tutorial/Workshop"
+  },
+  "predict": {
+    "provenance": {
+      "text": [
+        {
+          "doc_id": "xxx.pdf",
+          "page_idx+1": 132
+        }
+      ],
+      "image": [
+        {
+          "doc_id": "xxx.pdf",
+          "page_idx+1": 131
+        }
+      ],
+      "shortcut": [
+        {
+          "doc_id": "xxx.pdf",
+          "page_idx+1": 132
+        }
+      ],
+      "before_rerank": [] // will be deleted after calculate recall
+    },
+    "uuid": {
+      "text": ["626c5ba2-c893-5e31-89b5-3f8dd21a8363"],
+      "image": ["a5bc3fe4-dbb3-5bb0-96f1-a09fcaa62564"],
+      "shortcut": ["2a0c93e7-7572-52f7-bada-c85b482616ce"]
+    },
+    "predict_answer": "xxx",
+    "extracted_res": "```\nExtracted answer: 4\nAnswer format: Integer\n```"
+  },
+  "score": 1.0,
+  "gpt_score": 1.0, // TODO: MMLongBench
+  "pred": "4",
+  "answer": "4",
+  "recall": {
+    "text_recall": 0.5,
+    "image_recall": 0.0,
+    "shortcut_recall": 0.0,
+    "overall_recall": 0.5,
+    "before_rerank": 0.0,
+    "ranking_positions": []
+  },
+  "kg_recall": {
+    "text_recall": 0.5,
+    "image_recall": 0.0,
+    "shortcut_recall": 0.5,
+    "overall_recall": 0.5
+  },
+  "time_record": {
+    "start_time": 0,
+    "bm25_cost": 0,
+    "text_cost": 0,
+    "image_cost": 0,
+    "shortcut_cost": 0,
+    "text_rerank_cost": 0,
+    "retriever_cost": 0,
+    "rerank_cost": 0,
+    "qa_cost": 0
+  },
+  "middle_results": {
+    // will move to asolate .pkl
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "judge_res": "", // response from judge_agent.
+    "references": {}, // RAGFlow
+    "hybrid_search_results": {}, // ViDoRAG
+    "retriever_results": {
+      "text_results": [{ "result": "uuid", "score": 0.0 }],
+      "image_results": [],
+      "shortcut_results": [],
+      "bm25_results": []
+    }, // BayesRAG vector DB retriever results
+    "reranked_sorted_results": {}, // BayesRAG reranked only text results, in model_rerank()
+    // "kg_result": {},
+    "connectivity_map": {
+      // BayesRAG KG
+      "": {} // uuid: {}
+    }
+  },
+  "error": ""
+}

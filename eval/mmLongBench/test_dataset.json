@@ -1,0 +1,456 @@
+[
+  {
+    "qa": {
+      "id": "BRO-GL-MMONEY.pdf",
+      "question": "What is the Account No. of Account 7 in the portfolio overview example?",
+      "ground_truth": "ILF0000808",
+      "provenance": [
+        6
+      ],
+      "evidence_sources": [
+        6
+      ],
+      "answer_format": "Str",
+      "doc_type": "Brochure"
+    }
+  },
+  {
+    "qa": {
+      "id": "a5879805d70c854ea4361e43a84e3bb2.pdf",
+      "question": "what is the email id of the mtre laurent nahmiash ?",
+      "ground_truth": "lnahmiash@infavocats.com",
+      "provenance": [
+        14
+      ],
+      "evidence_sources": [
+        14
+      ],
+      "answer_format": "Str",
+      "doc_type": "Administration/Industry file"
+    }
+  },
+  {
+    "qa": {
+      "id": "PS_2018.01.09_STEM_FINAL.pdf",
+      "question": "What types of discrimination are most commonly reported by children in STEM jobs compared to men and experienced by teenagers in workplaces with a higher proportion of teenages in the survey of Pew Research Center, January 2018?",
+      "ground_truth": "Not answerable",
+      "provenance": [],
+      "evidence_sources": [],
+      "answer_format": "None",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "NUS-FASS-Graduate-Guidebook-2021-small.pdf",
+      "question": "Which of the following department does not provide a MBA programme, Department of Economics, Department of English Language and Literature, or Department of History? ",
+      "ground_truth": "Not answerable",
+      "provenance": [],
+      "evidence_sources": [],
+      "answer_format": "None",
+      "doc_type": "Guidebook"
+    }
+  },
+  {
+    "qa": {
+      "id": "2021-Apple-Catalog.pdf",
+      "question": "Regarding macbook high security solution, which numbers of features are not presented in the illustration?",
+      "ground_truth": "4",
+      "provenance": [
+        22
+      ],
+      "evidence_sources": [
+        22
+      ],
+      "answer_format": "Int",
+      "doc_type": "Brochure"
+    }
+  },
+  {
+    "qa": {
+      "id": "dr-vorapptchapter1emissionsources-121120210508-phpapp02_95.pdf",
+      "question": "For first two gases that causes greenhouse effect, list their proportions of the exhaust gas from Gasoline-engine.",
+      "ground_truth": "['13.7%', '0.1%']",
+      "provenance": [
+        48,
+        49
+      ],
+      "evidence_sources": [
+        48,
+        49
+      ],
+      "answer_format": "List",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "PH_2016.06.08_Economy-Final.pdf",
+      "question": "According to the report, which one is greater in population in the survey? Foreign born Latinos, or the Latinos interviewed by cellphone?",
+      "ground_truth": "Latinos interviewed by cellphone",
+      "provenance": [
+        19,
+        20
+      ],
+      "evidence_sources": [
+        19,
+        20
+      ],
+      "answer_format": "Str",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "formwork-150318073913-conversion-gate01_95.pdf",
+      "question": "Is 20mm Sheeting or 25mm Sheeting an appropriate size for timber formwork?",
+      "ground_truth": "25mm Sheeting",
+      "provenance": [
+        6
+      ],
+      "evidence_sources": [
+        6
+      ],
+      "answer_format": "Str",
+      "doc_type": "Tutorial/Workshop"
+    }
+  },
+  {
+    "qa": {
+      "id": "Guide-for-international-students-web.pdf",
+      "question": "Where did Terry Tan study the foundation course before he progressed to NTU?",
+      "ground_truth": "NTIC",
+      "provenance": [
+        33
+      ],
+      "evidence_sources": [
+        33
+      ],
+      "answer_format": "Str",
+      "doc_type": "Guidebook"
+    }
+  },
+  {
+    "qa": {
+      "id": "PP_2019.01.17_Trump-economy_FINAL2.pdf",
+      "question": "What is the proportion of people who say they are very confident in Lincoln's ability to handle an international crisis?",
+      "ground_truth": "Not answerable",
+      "provenance": [],
+      "evidence_sources": [],
+      "answer_format": "None",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "indonesiamobilemarketresearch-ag-150106055934-conversion-gate02_95.pdf",
+      "question": "What are the Online Games native major internet companies and the Telecom Operator name of the second largest Prepaid ARPU in 2008? Please list the answer in list with reverse alphabetical order.",
+      "ground_truth": "['XL', 'Kotakgame.com', 'GameQQ.net']",
+      "provenance": [
+        11,
+        17
+      ],
+      "evidence_sources": [
+        11,
+        17
+      ],
+      "answer_format": "List",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "2305.13186v3.pdf",
+      "question": "How many more claims does the Health Table datasets have comparing to Newspaper datasets? Please writeh the answer in int format. ",
+      "ground_truth": "Not answerable",
+      "provenance": [],
+      "evidence_sources": [],
+      "answer_format": "None",
+      "doc_type": "Academic paper"
+    }
+  },
+  {
+    "qa": {
+      "id": "PG_20.07.30_U.S.-Views-China_final.pdf",
+      "question": "Assume that after July 2020, the percentage of Republicans who believe \"China is an enemy of the U.S.\" increased by 10 percentage points, while the percentage of Democrats remained the same.  What would be the difference in the percentage between Republicans and Democrats at that time?",
+      "ground_truth": "29%",
+      "provenance": [
+        7
+      ],
+      "evidence_sources": [
+        7
+      ],
+      "answer_format": "Float",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "NYU_graduate.pdf",
+      "question": "List the STAFF MEMBERS IN the RESIDENCE HALL",
+      "ground_truth": "['Residence Hall Director', 'Residence Hall Assistant Director', 'Residence Hall Resource Manager', 'Resident Assistant']",
+      "provenance": [
+        21
+      ],
+      "evidence_sources": [
+        21
+      ],
+      "answer_format": "List",
+      "doc_type": "Brochure"
+    }
+  },
+  {
+    "qa": {
+      "id": "Pew-Research-Center_Hispanic-Identity-Report_12.20.2017.pdf",
+      "question": "According to the 2015 National Survey of Latinos details, which group of Latinos has the largest sample size among the 1500 samples in total?",
+      "ground_truth": "Foreign born (excl. PR)",
+      "provenance": [
+        26
+      ],
+      "evidence_sources": [
+        26
+      ],
+      "answer_format": "Str",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "PG_2020.05.21_International-Cooperation-COVID_FINAL.pdf",
+      "question": "How many Frenchman believe the U.S. can learn a great deal from other countries around the world about ways to slow the spread of coronavirus?",
+      "ground_truth": "Not answerable",
+      "provenance": [],
+      "evidence_sources": [],
+      "answer_format": "None",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "b3m5kaeqm2w8n4bwcesw-140602121350-phpapp02_95.pdf",
+      "question": "Does CFCs causes skin burn? Directly answer 'yes' or 'no'.",
+      "ground_truth": "Yes",
+      "provenance": [
+        18,
+        20
+      ],
+      "evidence_sources": [
+        18,
+        20
+      ],
+      "answer_format": "Str",
+      "doc_type": "Tutorial/Workshop"
+    }
+  },
+  {
+    "qa": {
+      "id": "ISEP_student_handbook_2020.pdf",
+      "question": "Which compulsory ISEP courses does the students must have? Write the answer in list format in ascending order. ",
+      "ground_truth": "['GS5002', 'GS6001', 'GS6883A', 'GS5101']",
+      "provenance": [
+        3
+      ],
+      "evidence_sources": [
+        3
+      ],
+      "answer_format": "List",
+      "doc_type": "Brochure"
+    }
+  },
+  {
+    "qa": {
+      "id": "BESTBUY_2023_10K.pdf",
+      "question": "Among operations, investing, and financing activities, which brought in the most (or lost the least) cash flow for Best Buy in FY2022?",
+      "ground_truth": "Operations activities",
+      "provenance": [
+        42
+      ],
+      "evidence_sources": [
+        42
+      ],
+      "answer_format": "Str",
+      "doc_type": "Financial report"
+    }
+  },
+  {
+    "qa": {
+      "id": "PP_2020.08.06_COVID-19-Restrictions_FINAL-1.pdf",
+      "question": "How many percent of American Japanese disapprove of the way Trump does as president?",
+      "ground_truth": "Not answerable",
+      "provenance": [],
+      "evidence_sources": [],
+      "answer_format": "None",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "91521110100M_4K_UHD_Display_User_Manual_V1.1.pdf",
+      "question": "For the users with the safety approval of UL Listed and CSA , what is the tenth bullet point for safety?",
+      "ground_truth": "Not answerable",
+      "provenance": [],
+      "evidence_sources": [],
+      "answer_format": "None",
+      "doc_type": "Guidebook"
+    }
+  },
+  {
+    "qa": {
+      "id": "watch_d.pdf",
+      "question": "At a position on your wrist that is about the width of two fingers away from the bottom of your palm, put the end of the ruler that comes with the watch through the buckle on the head. How many cm is this two fingers' distance according to the fogure?",
+      "ground_truth": "2.5-3cm",
+      "provenance": [
+        6
+      ],
+      "evidence_sources": [
+        6
+      ],
+      "answer_format": "Str",
+      "doc_type": "Guidebook"
+    }
+  },
+  {
+    "qa": {
+      "id": "ADOBE_2015_10K.pdf",
+      "question": "What is Cash Flow to Total Debt Ratio for ADBE In FY2015?",
+      "ground_truth": "0.77",
+      "provenance": [
+        63,
+        99
+      ],
+      "evidence_sources": [
+        63,
+        99
+      ],
+      "answer_format": "Float",
+      "doc_type": "Financial report"
+    }
+  },
+  {
+    "qa": {
+      "id": "StudentSupport_Guidebook.pdf",
+      "question": "What is the bank names shown in the figure of this document?",
+      "ground_truth": "['OCBC', 'citibank', 'DBS']",
+      "provenance": [
+        34
+      ],
+      "evidence_sources": [
+        34
+      ],
+      "answer_format": "List",
+      "doc_type": "Guidebook"
+    }
+  },
+  {
+    "qa": {
+      "id": "AMAZON_2017_10K.pdf",
+      "question": "what is Amazon's FY2017 return on equity? round your answer to three decimal",
+      "ground_truth": "0.109",
+      "provenance": [
+        38,
+        40
+      ],
+      "evidence_sources": [
+        38,
+        40
+      ],
+      "answer_format": "Float",
+      "doc_type": "Financial report"
+    }
+  },
+  {
+    "qa": {
+      "id": "COSTCO_2021_10K.pdf",
+      "question": "What is total long-term Liabilities for COSTCO in FY 2021? Anwser in millions",
+      "ground_truth": "11749",
+      "provenance": [
+        38
+      ],
+      "evidence_sources": [
+        38
+      ],
+      "answer_format": "Float",
+      "doc_type": "Financial report"
+    }
+  },
+  {
+    "qa": {
+      "id": "digitalmeasurementframework22feb2011v6novideo-110221233835-phpapp01_95.pdf",
+      "question": "What is the sum of the total number of paid search's conversions in the year of 2007, 2008 and the number of green bars in the heroes happen here launch?",
+      "ground_truth": "4",
+      "provenance": [
+        95,
+        107
+      ],
+      "evidence_sources": [
+        95,
+        107
+      ],
+      "answer_format": "Int",
+      "doc_type": "Tutorial/Workshop"
+    }
+  },
+  {
+    "qa": {
+      "id": "bigdatatrends-120723191058-phpapp02_95.pdf",
+      "question": "How many businesses are shown as the examples of transformation by big data?",
+      "ground_truth": "11",
+      "provenance": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "evidence_sources": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "answer_format": "Int",
+      "doc_type": "Tutorial/Workshop"
+    }
+  },
+  {
+    "qa": {
+      "id": "nielsen2015musicbizpresentation-final-150526143534-lva1-app6891_95.pdf",
+      "question": "What kind of albums are reducing the share of their business due to streaming?",
+      "ground_truth": "['Physical albums', 'Digital albums', 'Digital tracks']",
+      "provenance": [
+        6
+      ],
+      "evidence_sources": [
+        6
+      ],
+      "answer_format": "List",
+      "doc_type": "Research report / Introduction"
+    }
+  },
+  {
+    "qa": {
+      "id": "8e7c4cb542ad160f80fb3d795ada35d8.pdf",
+      "question": "What percentage of land area was rezoned in the Bronx from 2003-2007?",
+      "ground_truth": "18.40%",
+      "provenance": [
+        8
+      ],
+      "evidence_sources": [
+        8
+      ],
+      "answer_format": "Float",
+      "doc_type": "Research report / Introduction"
+    }
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "qa": {
+      "id": "NYSE_HSBC_2020.pdf",
+      "num_id": "66",
+      "question": "What is the company's total reported revenue for Europe and MENA combined in 2020?",
+      "ground_truth": "The total reported revenue for Europe and MENA combined in 2020 is $21,447 million ($18,419 million from Europe and $2,628 million from MENA).",
+      "evidence": "This question requires adding the reported revenues from Europe and MENA for 2020.",
+      "answer_format": "multimodal-t",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "FBS_OES_28APR2023_PUBLIC.pdf",
+      "num_id": "101",
+      "question": "What is the goal that the Bureau Objective 1.1 supports regarding global conservation?",
+      "ground_truth": "The goal is to conserve at least 30 percent of land and waters and 30 percent of the global ocean by 2030.",
+      "evidence": "To support global efforts to conserve at least 30 percent of land and waters and 30 percent of the global ocean by 2030...",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "NYSE_NVS_2021.pdf",
+      "num_id": "54",
+      "question": "Which product of the company had the highest percentage increase in total net sales from 2020 to 2021?",
+      "ground_truth": "Entresto had the highest percentage increase in total net sales with 40%.",
+      "evidence": "By comparing the \"% change cc\" column for \"Total\" net sales, Entresto shows a 40% increase, which is the highest percentage listed.",
+      "answer_format": "multimodal-t",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "L18-1269.pdf",
+      "num_id": "31",
+      "question": "What are the performances of NER systems in CoNLL French?",
+      "ground_truth": "Not mentioned.",
+      "evidence": "",
+      "answer_format": "unanswerable",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "P18-1009.pdf",
+      "num_id": "47",
+      "question": "Does the presented data collection process prioritize precision or comprehensiveness?",
+      "ground_truth": "Precision.",
+      "evidence": "The process is described in the text as: \"Our collection process focuses on precision. Thus, the final set is diverse but not comprehensive.\"",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "2020714999.pdf",
+      "num_id": "161",
+      "question": "What does the section about China discuss around?",
+      "ground_truth": "The report does not discuss about the situations in China.",
+      "evidence": "",
+      "answer_format": "unanswerable",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "2023555925.pdf",
+      "num_id": "150",
+      "question": "Was the Emergencies Act given royal assent on July 21, 1988?",
+      "ground_truth": "Not mentioned.",
+      "evidence": "",
+      "answer_format": "unanswerable",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "20220930.pdf",
+      "num_id": "185",
+      "question": "Has David C. Banks announced any changes to New York City's school admissions policies?",
+      "ground_truth": "Yes.",
+      "evidence": "\"Selective high schools will also be able to prioritize top-performing students.\"",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "20220406.pdf",
+      "num_id": "199",
+      "question": "Did the Security Council take action to stop the war after Zelensky's speech?",
+      "ground_truth": "No.",
+      "evidence": "\"Mr. Zelensky said...knowing that the council...would do nothing but talk.\"",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "FBS_CDP_Public.pdf",
+      "num_id": "102",
+      "question": "What is the objective number of the Bureau Cross-Cutting Management Objective discussed in the text?",
+      "ground_truth": "1.2.",
+      "evidence": "The text refers to \"Bureau Cross-Cutting Management Objective 1.2\" at the beginning.",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "P19-1164.pdf",
+      "num_id": "2",
+      "question": "How many words are there in total in the paper?",
+      "ground_truth": "3790",
+      "evidence": "",
+      "answer_format": "meta-data",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "NYSE_PM_2020.pdf",
+      "num_id": "80",
+      "question": "How did PMI's cumulative total shareholder return compare to the S&P 500 Index at the end of the 2020?",
+      "ground_truth": "At the end of the five-year period, PMI's cumulative total shareholder return was lower than the S&P 500 Index.",
+      "evidence": "The graph shows that PMI's return reaches $121.80 as of December 31, 2020, which is lower than the S&P 500 Index's return of $203.00 at the same date.",
+      "answer_format": "multimodal-f",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "NYSE_PEP_2020.pdf",
+      "num_id": "59",
+      "question": "Did PepsiCo's net revenue increase from 2018 to 2020?",
+      "ground_truth": "Yes.",
+      "evidence": "Net Revenue $64,661 million for 2018 and $70,372 million for 2020 in the provided text.",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "20240106.pdf",
+      "num_id": "202",
+      "question": "Has the FDA approved Florida's plan to import drugs from Canada?",
+      "ground_truth": "Yes.",
+      "evidence": "The approval, issued in a letter to Florida on Friday...",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "NYSE_TM_2021.pdf",
+      "num_id": "88",
+      "question": "On which page does the document detail the Toyota Production System (TPS)?",
+      "ground_truth": "7 or 8.",
+      "evidence": "",
+      "answer_format": "meta-data",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "20220320.pdf",
+      "num_id": "219",
+      "question": "Which publication is Maureen Dowd associated with?",
+      "ground_truth": "SUNDAY REVIEW.",
+      "evidence": "Maureen Dowd PAGE 9 SUNDAY REVIEW",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "20220406.pdf",
+      "num_id": "199",
+      "question": "Who delivered a scathing speech to the United Nations?",
+      "ground_truth": "President Volodymyr Zelensky of Ukraine.",
+      "evidence": "\"President Volodymyr Zelensky of Ukraine delivered a scathing speech to the United Nations...\"",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "20220405.pdf",
+      "num_id": "228",
+      "question": "What date did the New York Times release the edition discussing Hurricane Idalia?",
+      "ground_truth": "Not mentioned.",
+      "evidence": "",
+      "answer_format": "unanswerable",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "NASDAQ_CMCSA_2021.pdf",
+      "num_id": "63",
+      "question": "By how much did the company's interest expense change from 2020 to 2021?",
+      "ground_truth": "The interest expense decreased by $307 million from 2020 to 2021.",
+      "evidence": "The interest expense for 2020 is $4,588 million and for 2021 it is $4,281 million; subtracting the two gives the decrease in expense.",
+      "answer_format": "multimodal-t",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "P19-1470.pdf",
+      "num_id": "37",
+      "question": "What is the PPL score when using 50% of the training data according to Table 4?",
+      "ground_truth": "The PPL score when using 50% of the training data is 11.82.",
+      "evidence": "This question directly probes for information provided in the table and does not require any calculation or comparison.",
+      "answer_format": "multimodal-t",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "FBS_S_GWI_Public.pdf",
+      "num_id": "116",
+      "question": "What essential factors must be considered for S/GWI to foster regular outreach and coordination according to Bureau Objective 4.3?",
+      "ground_truth": "S/GWI must consider political will, competing priorities, staff capacity, and interest/willingness from partner bureaus to foster regular outreach and coordination effectively.",
+      "evidence": "The text lists these factors under \"Bureau Objective 4.3 Risk Considerations\" mentioning \"political will, competing priorities, staff capacity, and interest/willingness from partner bureaus.\"",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "OTC_TCS_2020.pdf",
+      "num_id": "81",
+      "question": "How much were the company's income taxes in 2022?",
+      "ground_truth": "Not mentioned.",
+      "evidence": "",
+      "answer_format": "unanswerable",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "W19-5302.pdf",
+      "num_id": "43",
+      "question": "Which metric achieved the highest correlation score for the enlt-en language pair among those listed?",
+      "ground_truth": "YiSi-1.",
+      "evidence": "YiSi-1 enlt-en score (0.376), which is the highest for that language pair in the table.",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "2020714997.pdf",
+      "num_id": "162",
+      "question": "What is the title of the document?",
+      "ground_truth": "Regulation of Wild Animal Wet Markets in Selected Jurisdictions",
+      "evidence": "",
+      "answer_format": "meta-data",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "N19-1170.pdf",
+      "num_id": "7",
+      "question": "Does increasing specificity in responses lead to more nonsensical outputs?",
+      "ground_truth": "Yes.",
+      "evidence": "\"At the extremes, the model produces only the most rare or the most common tokens...but overall produces less nonsensical outputs.\"",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "International-Narcotics-Control-Strategy-Report-Volume-I-FINAL-1.pdf",
+      "num_id": "93",
+      "question": "How much did the seizures of precursor chemicals increase in Kazakhstan from 2019 to the first nine months of 2020?",
+      "ground_truth": "The seizures of precursor chemicals increased by 1.2 metric tons (MT), from 1.5 MT in 2019 to 2.7 MT during the same period.",
+      "evidence": "Seizures of precursor chemicals also increased from 1.5 MT in 2019 to 2.7 MT during the same period.",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "Country_Reports_2021_Complete_MASTER.no_maps-011323-Accessible.pdf",
+      "num_id": "120",
+      "question": "What is the most common abbreviation in the document?",
+      "ground_truth": "ISIS.",
+      "evidence": "",
+      "answer_format": "meta-data",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "FBS_L_27JAN2022_PUBLIC-1.pdf",
+      "num_id": "111",
+      "question": "How many pages does the report have?",
+      "ground_truth": "20.",
+      "evidence": "",
+      "answer_format": "meta-data",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "NYSE_TM_2021.pdf",
+      "num_id": "88",
+      "question": "What is the target percentage for the reduction in cost of a single battery?",
+      "ground_truth": "The target is a greater than 30% reduction in cost of a single battery.",
+      "evidence": "This information is directly stated under the headline \"Battery Cost Targets: Integrated Vehicle-battery Development\" in the middle section of the image.",
+      "answer_format": "multimodal-f",
+      "provenance": []
+    }
+  },
+  {
+    "qa": {
+      "id": "FY-2020-Agency-Financial-Report.pdf",
+      "num_id": "91",
+      "question": "Did the Department comply with all FFMIA requirements?",
+      "ground_truth": "No.",
+      "evidence": "Since our FY 2009 audit, we have reported annually that the Department did not substantially comply with all requirements of FFMIA.",
+      "answer_format": "text-only",
+      "provenance": []
+    }
+  }
+]
