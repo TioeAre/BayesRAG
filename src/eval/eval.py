@@ -2,7 +2,7 @@ import os, sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from src.config.project_config import project_config
-from src.utils.unigpt import GPT
+from src.utils.gpt import GPT
 from src.langchain.models.models import RAGModels
 from loguru import logger
 from concurrent.futures import ThreadPoolExecutor

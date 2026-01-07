@@ -21,4 +21,4 @@ export ADD_VECTOR_TEXT_BATCH_SIZE=5
 export ADD_VECTOR_IMAGE_BATCH_SIZE=5
 export ADD_KG_PDF_BATCH_SIZE=5
 
-/opt/miniforge3/bin/conda run -n nomic --live-stream python ./eval/mmLongBench/test_mmLongBench.py
+/opt/miniforge3/bin/conda run -n bayesrag --live-stream python ./eval/mmLongBench/test_mmLongBench.py

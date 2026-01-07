@@ -4,7 +4,7 @@ export VLLM_CACHE_ROOT="/cache/vllm"
 
 echo "starting Qwen3-Embedding-4B (Port 12501, GPU 0.3)..."
 
-/opt/miniforge3/bin/conda run -n nomic --live-stream vllm serve \
+/opt/miniforge3/bin/conda run -n bayesrag --live-stream vllm serve \
     /models/Qwen3-Embedding-4B \
     --served-model-name Qwen3-Embedding-4B \
     --task embed \
@@ -18,7 +18,7 @@ sleep 20
 
 # echo "starting Qwen3-Reranker-4B (Port 12502, GPU 0.6)..."
 
-# /opt/miniforge3/bin/conda run -n nomic --live-stream vllm serve \
+# /opt/miniforge3/bin/conda run -n bayesrag --live-stream vllm serve \
 #     /models/Qwen3-Reranker-4B \
 #     --served-model-name Qwen3-Reranker-4B \
 #     --host 0.0.0.0 \
@@ -28,7 +28,7 @@ sleep 20
 
 # echo "starting bge-reranker-v2-m3 (Port 12502, GPU 0.25)..."
 
-# /opt/miniforge3/bin/conda run -n nomic --live-stream vllm serve \
+# /opt/miniforge3/bin/conda run -n bayesrag --live-stream vllm serve \
 #     /models/bge-reranker-v2-m3 \
 #     --served-model-name bge-reranker-v2-m3 \
 #     --host 0.0.0.0 \
@@ -39,7 +39,7 @@ sleep 20
 
 echo "starting mineru (Port 12503, GPU 0.25)..."
 
-MINERU_MODEL_SOURCE=local MINERU_TOOLS_CONFIG_JSON="/models/mineru.json" /opt/miniforge3/bin/conda run -n nomic --live-stream mineru-openai-server --engine vllm --host 0.0.0.0 --port 12503 --gpu_memory_utilization=0.3
+MINERU_MODEL_SOURCE=local MINERU_TOOLS_CONFIG_JSON="/models/mineru.json" /opt/miniforge3/bin/conda run -n bayesrag --live-stream mineru-openai-server --engine vllm --host 0.0.0.0 --port 12503 --gpu_memory_utilization=0.3
 # mineru-api --host 0.0.0.0 --port 12502
 # -b vlm-http-client -u http://127.0.0.1:30000
 

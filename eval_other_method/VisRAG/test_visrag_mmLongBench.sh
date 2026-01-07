@@ -28,4 +28,4 @@ export RESULT_DIR_NAME="gpt_4o_mini_Bench_results"
 
 export VISRAG_RAW_RESULTS_PATH="/projects/rag_method/UltraRAG/output/memory_test_mmLongBench_eval_visrag_mmLongBench_20251217_143634.json"
 
-/opt/miniforge3/bin/conda run -n nomic --live-stream python ./eval_other_method/VisRAG/eval_visrag_mmlongbench.py
+/opt/miniforge3/bin/conda run -n bayesrag --live-stream python ./eval_other_method/VisRAG/eval_visrag_mmlongbench.py

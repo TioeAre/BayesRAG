@@ -8,7 +8,7 @@ from src.config.project_config import project_config
 from eval.third_party.MMLongBench.eval.eval_score import eval_acc_and_f1
 from eval.mmLongBench.test_mmLongBench import read_dataset, _evaluate
 from src.eval.eval import print_config
-from src.utils.unigpt import GPT, extract_content_outside_think
+from src.utils.gpt import GPT, extract_content_outside_think
 from src.utils.utils import save_pkl_result
 from src.langchain.utils.uuid import generate_stable_uuid_for_text
 from loguru import logger
@@ -69,7 +69,7 @@ def openai_chat_request(question: str, pdf_path: str) -> Tuple[str, Optional[lis
         content.append({"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64}"}})  # type: ignore
     messages = [{"role": "user", "content": content}]
 
-    chat = GPT(model=model, vendor="azure", stream=stream, temperature=0.2)
+    chat = GPT()
 
     try:
         result, _, reasoning_content, _, token_usage = chat.send_chat_request(messages)

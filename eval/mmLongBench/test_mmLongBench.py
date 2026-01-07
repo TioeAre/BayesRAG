@@ -11,7 +11,7 @@ from src.eval.additional_analysis import (
     analysis_provenance,
     addi_get_provenance_middle_result,
 )
-from src.utils.unigpt import GPT, extract_content_outside_think
+from src.utils.gpt import GPT, extract_content_outside_think
 from src.utils.utils import save_pkl_result
 from src.dataset_loader.mmlongbench import dataset as Dataset
 from src.langchain.models.models import RAGModels
@@ -51,17 +51,15 @@ def read_dataset(
     else:
         with open(sample_path, "r") as f:
             dataset_info = json.load(f)
-            # dataset_info = dataset_info[:4]  # HACK for quick test
+            # dataset_info = dataset_info[:4]  # for quick test
     return dataset_info
 
 
 # @task(name="extract_answer")
 async def extract_answer(question, output) -> str:
-    # answer_agent = GPT(model="qwen3_32b", vendor="unisound", stream=False, temperature=0.2)
-    # answer_agent = GPT(model="azure-gpt-4o", vendor="azure", stream=False, temperature=0.2)
     answer_agent = OpenAI(
-        base_url=project_config.QWEN3_VL_BASE_URL,
-        api_key=project_config.API_KEY,
+        base_url=project_config.JUDGE_AGENT_BASE_URL,
+        api_key=project_config.JUDGE_AGENT_API_KEY,
         timeout=3600,
     )
     with open(
@@ -75,11 +73,9 @@ async def extract_answer(question, output) -> str:
             "role": "user",
             "content": prompt,
         },
-        # {"role": "assistant", "content": "\n\nQuestion:{}\nAnalysis:{}\n".format(question, output)},
     ]
-    # response, _, _, _, token_usage = answer_agent.send_chat_request(messages=messages)
     completion = answer_agent.chat.completions.create(
-        model=project_config.LLM_MODEL_NAME,  # type: ignore
+        model=project_config.JUDGE_AGENT_MODEL_NAME,  # type: ignore
         messages=messages,  # type: ignore
         max_tokens=2048,
     )
@@ -171,10 +167,9 @@ Predict Answer: <predict>{{sys_ans}}</predict>
 
 Ground Truth: <gt>{{ref_ans}}</gt>
 """
-    # judge_agent = GPT(model="qwen3_32b", vendor="unisound", stream=False, temperature=0.2)
     judge_agent = OpenAI(
-        base_url=project_config.QWEN3_VL_BASE_URL,
-        api_key=project_config.API_KEY,
+        base_url=project_config.JUDGE_AGENT_BASE_URL,
+        api_key=project_config.JUDGE_AGENT_API_KEY,
         timeout=3600,
     )
     cur_prompt = (
@@ -187,9 +182,8 @@ Ground Truth: <gt>{{ref_ans}}</gt>
         {"role": "user", "content": cur_prompt},
     ]
     try:
-        # response_content, _, _, _, token_usage = judge_agent.send_chat_request(messages=messages)
         completion = judge_agent.chat.completions.create(
-            model=project_config.LLM_MODEL_NAME,  # type: ignore
+            model=project_config.JUDGE_AGENT_MODEL_NAME,  # type: ignore
             messages=messages,  # type: ignore
             max_tokens=2048,
         )
@@ -372,11 +366,12 @@ async def main():
         )
 
     faild_idx = []
-    faild_path = "{project_config.project_root}/eval/count_result/mmlongbench_failed_case_study.json"
-    with open(faild_path, "r") as f:
-        faild_cases = json.load(f)
-        for faild_case in faild_cases:
-            faild_idx.append(faild_case["index"])
+    faild_path = f"{project_config.project_root}/eval/count_result/mmlongbench_failed_case_study.json"
+    if Path(faild_path).exists() and project_config.TEST_FAILED_CASE:
+        with open(faild_path, "r") as f:
+            faild_cases = json.load(f)
+            for faild_case in faild_cases:
+                faild_idx.append(faild_case["index"])
     idx = 0
 
     semaphore = asyncio.Semaphore(project_config.EVAL_CONCURRENCY_LIMIT)

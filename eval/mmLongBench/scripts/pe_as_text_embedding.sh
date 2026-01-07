@@ -10,7 +10,7 @@ export PRINT_FILE=false
 export PRINT_TERMINAL_LEVEL=DEBUG
 export TEXT_DATABASE="./database/pe_text_db"
 export EMBEDDING_MODEL_NAME="PE-Core-bigG-14-448"
-# /opt/miniforge3/bin/conda run -n nomic --live-stream python ./eval/mmLongBench/test_mmLongBench.py
+# /opt/miniforge3/bin/conda run -n bayesrag --live-stream python ./eval/mmLongBench/test_mmLongBench.py
 
 # test
 export TEST_BENCH_FULL=false
@@ -30,4 +30,4 @@ export TEXT_K=100
 export IMAGE_K=5
 export SHORT_CUT_K=5
 
-/opt/miniforge3/bin/conda run -n nomic --live-stream python ./eval/mmLongBench/test_mmLongBench.py
+/opt/miniforge3/bin/conda run -n bayesrag --live-stream python ./eval/mmLongBench/test_mmLongBench.py

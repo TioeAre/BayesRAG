@@ -3,7 +3,7 @@ import os, sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
 from src.config.project_config import project_config
-from src.utils.unigpt import GPT, extract_content_outside_think
+from src.utils.gpt import GPT, extract_content_outside_think
 
 # isort:skip
 import copy
@@ -444,7 +444,9 @@ if project_config.ADD_VECTOR:
                             pdf_bytes = convert_pdf_bytes_to_bytes_by_pypdfium2(
                                 pdf_bytes, self.start_page_id, self.end_page_id
                             )
-                            local_image_dir, local_md_dir = prepare_env(output_dir, pdf_file_name, parse_method)
+                            local_image_dir, local_md_dir = prepare_env(
+                                self.parse_result_dir, pdf_file_name, parse_method
+                            )
                             image_writer, md_writer = FileBasedDataWriter(local_image_dir), FileBasedDataWriter(
                                 local_md_dir
                             )
@@ -875,7 +877,7 @@ Focus on providing accurate, only return a brief visual caption that would be us
             # response_content, _, _, _, judge_token_usage = caption_agent.send_chat_request(messages=messages)
             caption_agent = OpenAI(
                 base_url=project_config.QWEN3_VL_BASE_URL,
-                api_key=project_config.API_KEY,
+                api_key=project_config.LLM_MODEL_API_KEY,
                 timeout=3600,
             )
             completion = caption_agent.chat.completions.create(

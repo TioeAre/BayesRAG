@@ -172,14 +172,3 @@ class Qwen3CrossEncoder(BaseModel, BaseCrossEncoder):
                 logger.debug(f"Top Rerank score: {sorted_results[0][1]}")
 
         return sorted_results
-
-    # k=15
-    # model 24.09 GB, nvidia-smi 26.02 GB
-    # docs token 735
-    # total token 6440
-    # 33 GB
-
-    # k=30
-    # docs token 1561
-    # total token 15720
-    # 42.02 GB

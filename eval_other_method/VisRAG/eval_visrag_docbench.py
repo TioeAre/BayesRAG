@@ -17,7 +17,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 from src.eval.eval import print_config
-from src.utils.unigpt import GPT
+from src.utils.gpt import GPT
 from src.utils.utils import save_pkl_result
 from src.dataset_loader.docbench import dataset as Dataset
 from src.langchain.utils.uuid import generate_stable_uuid_for_text

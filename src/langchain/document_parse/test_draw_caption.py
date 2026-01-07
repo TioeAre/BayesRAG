@@ -6,7 +6,7 @@ from openai import OpenAI
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
 from src.config.project_config import project_config
-from src.utils.unigpt import GPT, extract_content_outside_think
+from src.utils.gpt import GPT, extract_content_outside_think
 
 
 class BlockType:
@@ -71,7 +71,7 @@ Focus on extracting meaningful insights and relationships from the tabular data,
         try:
             caption_agent = OpenAI(
                 base_url=project_config.QWEN3_VL_BASE_URL,
-                api_key=project_config.API_KEY,
+                api_key=project_config.LLM_MODEL_API_KEY,
                 timeout=300,  # 测试时超时设置短一点
             )
             completion = caption_agent.chat.completions.create(

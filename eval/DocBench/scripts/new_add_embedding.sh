@@ -19,4 +19,4 @@ export ADD_VECTOR_TEXT_BATCH_SIZE=10
 export ADD_VECTOR_IMAGE_BATCH_SIZE=20
 export ADD_KG_PDF_BATCH_SIZE=20
 
-/opt/miniforge3/bin/conda run -n nomic --live-stream python ./eval/DocBench/test_DocBench.py
+/opt/miniforge3/bin/conda run -n bayesrag --live-stream python ./eval/DocBench/test_DocBench.py

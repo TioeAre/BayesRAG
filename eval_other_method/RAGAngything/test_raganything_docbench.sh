@@ -16,12 +16,12 @@ export EVAL_CONCURRENCY_LIMIT=1
 export EMBEDDING_MODEL_NAME="vllm-Qwen3-Embedding-4B"
 export RERANK_MODEL_NAME="vllm-bge-reranker-v2-m3"
 
-export MONGO_URI="mongodb://admin:admin@localhost:27018/?authSource=admin&directConnection=true"
-export NEO4J_URI="neo4j://localhost:7688"
+export MONGO_URI=""
+export NEO4J_URI=""
 
 export IF_GPT4o=true
 export GPT4o_MODEL_NAME="azure-gpt-4o-mini"
-export UNI_BASE_URL="http://localhost:61217/v1"   # do not export if using qwen3-vl as llm function, export when using gpt-4o
+export LLM_MODEL_BASE_URL=""   # do not export if using qwen3-vl as llm function, export when using gpt-4o
 
 # export IF_GPT4o=false   # use qwen3-vl-32b
 
@@ -29,4 +29,4 @@ export WRITE_RESULTS=true
 export RESULT_DIR_NAME="gpt_4o_mini_Bench_results"
 # export RESULT_DIR_NAME="Qwen3_Bench_results"
 
-/opt/miniforge3/bin/conda run -n nomic --live-stream python ./eval_other_method/RAGAngything/test_raganything_docbench.py
+/opt/miniforge3/bin/conda run -n bayesrag --live-stream python ./eval_other_method/RAGAngything/test_raganything_docbench.py

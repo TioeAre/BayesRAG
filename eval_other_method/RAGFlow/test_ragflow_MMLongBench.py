@@ -8,7 +8,7 @@ from src.config.project_config import project_config
 from eval.third_party.MMLongBench.eval.eval_score import eval_acc_and_f1
 from eval.mmLongBench.test_mmLongBench import read_dataset, _evaluate
 from src.eval.eval import print_config
-from src.utils.unigpt import extract_content_outside_think
+from src.utils.gpt import extract_content_outside_think
 from src.utils.utils import save_pkl_result
 from src.langchain.utils.uuid import generate_stable_uuid_for_text
 from loguru import logger

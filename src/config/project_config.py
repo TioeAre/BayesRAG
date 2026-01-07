@@ -13,14 +13,22 @@ class project_config:
     config_path = os.path.join(project_root.absolute(), ENV_FILE_NAME)
     load_dotenv(dotenv_path=config_path, override=False)
 
-    API_KEY = os.getenv("API_KEY", "API_KEY")
+    LLM_MODEL_API_KEY = os.getenv("LLM_MODEL_API_KEY", "API_KEY")
+    EMBEDDING_MODEL_API_KEY = os.getenv("EMBEDDING_MODEL_API_KEY", "API_KEY")
     ENABLE_THINK = os.getenv("ENABLE_THINK", "false").lower() == "true"
 
     QWEN3_VL_BASE_URL = os.getenv("QWEN3_VL_BASE_URL", "https://example.com/v1")
+    QWEN3_VL_API_KEY = os.getenv("QWEN3_VL_API_KEY", "API_KEY")
 
-    # UNI_BASE_URL = os.getenv("UNI_BASE_URL", "http://localhost:61217/v1")
+    JUDGE_AGENT_BASE_URL = os.getenv("JUDGE_AGENT_BASE_URL", "https://example.com/v1")
+    JUDGE_AGENT_API_KEY = os.getenv("JUDGE_AGENT_API_KEY", "API_KEY")
+    JUDGE_AGENT_MODEL_NAME = os.getenv("JUDGE_AGENT_MODEL_NAME", "")
+
+    OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://example.com/v1")
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "API_KEY")
+
     # LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "qwen3_32b")
-    UNI_BASE_URL = os.getenv("UNI_BASE_URL", "https://example.com/v1")
+    LLM_MODEL_BASE_URL = os.getenv("LLM_MODEL_BASE_URL", "https://example.com/v1")
     LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "Qwen3-VL-32B-Instruct")
 
     RAGANYTHING_LLM_MODEL_MAX_ASYNC = int(os.getenv("RAGANYTHING_LLM_MODEL_MAX_ASYNC", "20"))
@@ -64,6 +72,7 @@ class project_config:
 
     ADDITIONAL_ANALYSIS = os.getenv("ADDITIONAL_ANALYSIS", "false").lower() == "true"
     ADDITIONAL_ANALYSIS_TYPE = os.getenv("ADDITIONAL_ANALYSIS_TYPE", "recall")
+    TEST_FAILED_CASE = os.getenv("TEST_FAILED_CASE", "false").lower() == "true"
 
     # python config
     DEBUG = os.getenv("DEBUG", "false").lower() == "true"

@@ -196,7 +196,7 @@ async def main(kg: KG):
         # result = await query(kg.rag, query_text, mode=mode)  # raganything.aquery
         print("======================== kg start ========================")
         # print(result)
-        chunk_result = await kg.rag.lightrag.full_entities.get_by_id("09be6f81-ac3e-56bb-915e-ed235c401de5")
+        chunk_result = await kg.rag.lightrag.full_entities.get_by_id("09be6f81-ac3e-56bb-915e-ed235c401de5")  # type: ignore
         print(chunk_result)
         print("======================== kg result ========================")
         break

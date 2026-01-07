@@ -9,7 +9,7 @@ import numpy as np
 from pathlib import Path
 from langchain_core.documents import Document
 from src.langchain.utils.image import is_base64
-from src.utils.unigpt import GPT
+from src.utils.gpt import GPT
 from src.utils.utils import _run_sync
 from src.langchain.utils.uuid import generate_stable_uuid_for_text
 from src.langchain.utils.rerank import add_to_combination_results, add_to_final_results
@@ -140,8 +140,7 @@ class BayesReranker(object):
             self._normalize_and_sharpen(shortcut_result["score"], self.max_shortcut_score, self.min_shortcut_score),
             # shortcut_result["score"],
         ]
-        # 2025-12-03 15:45:36.183 | WARNING  | src.langchain.bayes.bayes_rerank:merge_retriever_results:254 - 1.1878563165664673, 1.6427643299102783, 1.4118326902389526
-        # 2025-12-03 15:45:36.183 | WARNING  | src.langchain.bayes.bayes_rerank:merge_retriever_results:255 - 0.7070086002349854, 1.5542547702789307, 0.9997894167900085
+
         current_m = {"Y": 0.0, "N": 0.0, "Theta": 1.0}
         for score in processed_scores:
             m_y = alpha * score

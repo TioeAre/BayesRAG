@@ -32,4 +32,4 @@ export RAGANYTHING_LLM_MODEL_MAX_ASYNC=200
 
 export SUMMARY_CONTEXT_SIZE=2048
 
-/opt/miniforge3/bin/conda run -n nomic --live-stream python ./eval/mmLongBench/test_mmLongBench.py
+/opt/miniforge3/bin/conda run -n bayesrag --live-stream python ./eval/mmLongBench/test_mmLongBench.py

@@ -14,11 +14,11 @@ max_tokens = int(os.getenv("OPENAI_LLM_MAX_TOKENS", 4096))
 def llm_model_func_qwen3(prompt, system_prompt=None, history_messages=[], **kwargs):
     if project_config.LLM_MODEL_NAME.lower().startswith("qwen3-vl"):
         return openai_complete_if_cache(
-            project_config.LLM_MODEL_NAME,
+            "Qwen3-VL-32B-Instruct",
             prompt,
             system_prompt=system_prompt,
             history_messages=history_messages,
-            api_key=project_config.API_KEY,
+            api_key=project_config.QWEN3_VL_API_KEY,
             base_url=project_config.QWEN3_VL_BASE_URL,
             openai_client_configs={
                 "timeout": 3600,
@@ -36,8 +36,8 @@ def llm_model_func_qwen3(prompt, system_prompt=None, history_messages=[], **kwar
         prompt,
         system_prompt=system_prompt,
         history_messages=history_messages,
-        api_key=project_config.API_KEY,
-        base_url=project_config.UNI_BASE_URL,
+        api_key=project_config.LLM_MODEL_API_KEY,
+        base_url=project_config.LLM_MODEL_BASE_URL,
         openai_client_configs={
             "timeout": 3600,
         },
@@ -56,8 +56,8 @@ def llm_model_func_gpt4o(prompt, system_prompt=None, history_messages=[], **kwar
         prompt,
         system_prompt=system_prompt,
         history_messages=history_messages,
-        api_key=project_config.API_KEY,
-        base_url=project_config.UNI_BASE_URL,
+        api_key=project_config.OPENAI_API_KEY,
+        base_url=project_config.OPENAI_BASE_URL,
         openai_client_configs={"timeout": 3600},
         **kwargs,
     )
@@ -78,7 +78,7 @@ def vision_model_func_qwen3vl(
             system_prompt=None,
             history_messages=[],
             messages=messages,
-            api_key=project_config.API_KEY,
+            api_key=project_config.QWEN3_VL_API_KEY,
             base_url=project_config.QWEN3_VL_BASE_URL,
             openai_client_configs={
                 "timeout": 3600,
@@ -113,7 +113,7 @@ def vision_model_func_qwen3vl(
                     else {"role": "user", "content": prompt}
                 ),
             ],
-            api_key=project_config.API_KEY,
+            api_key=project_config.QWEN3_VL_API_KEY,
             base_url=project_config.QWEN3_VL_BASE_URL,
             openai_client_configs={
                 "timeout": 3600,
@@ -144,8 +144,8 @@ def vision_model_func_gpt4o(
             system_prompt=None,
             history_messages=[],
             messages=messages,
-            api_key=project_config.API_KEY,
-            base_url=project_config.UNI_BASE_URL,
+            api_key=project_config.OPENAI_API_KEY,
+            base_url=project_config.OPENAI_BASE_URL,
             **kwargs,
         )
     elif image_data:
@@ -171,8 +171,8 @@ def vision_model_func_gpt4o(
                     else {"role": "user", "content": prompt}
                 ),
             ],
-            api_key=project_config.API_KEY,
-            base_url=project_config.UNI_BASE_URL,
+            api_key=project_config.OPENAI_API_KEY,
+            base_url=project_config.OPENAI_BASE_URL,
             **kwargs,
         )
     else:
@@ -189,7 +189,7 @@ embedding_func = EmbeddingFunc(
             if project_config.EMBEDDING_MODEL_NAME.startswith("vllm")
             else project_config.EMBEDDING_MODEL_NAME
         ),
-        api_key=project_config.API_KEY,
+        api_key=project_config.EMBEDDING_MODEL_API_KEY,
         base_url=project_config.EMBEDDING_BASE_URL_RAGANYTHING,
     ),
 )
@@ -201,7 +201,7 @@ rerank_model_func = partial(
         if project_config.RERANK_MODEL_NAME.startswith("vllm")
         else project_config.RERANK_MODEL_NAME
     ),
-    api_key=os.getenv("RERANK_BINDING_API_KEY", "None"),
+    api_key=os.getenv("RERANK_MODEL_API_KEY", "None"),
     base_url=project_config.RERANKER_BASE_URL_VEC,
     # enable_chunking=os.getenv("RERANK_ENABLE_CHUNKING", "false").lower() == "true",
     # max_tokens_per_doc=int(os.getenv("RERANK_MAX_TOKENS_PER_DOC", "4096")),

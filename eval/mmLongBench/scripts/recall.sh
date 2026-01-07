@@ -78,4 +78,4 @@ export TUPLE_RERANK_TOP_K_IMAGE=20
 export TUPLE_RERANK_TOP_K_SHORTCUT=20
 
 
-/opt/miniforge3/bin/conda run -n nomic --live-stream python ./eval/mmLongBench/test_mmLongBench.py
+/opt/miniforge3/bin/conda run -n bayesrag --live-stream python ./eval/mmLongBench/test_mmLongBench.py

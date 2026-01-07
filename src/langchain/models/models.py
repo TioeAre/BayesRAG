@@ -16,7 +16,7 @@ from src.langchain.reranker.vllm_reranker import VLLMRemoteCrossEncoder
 from src.langchain.bayes.bayes_rerank import BayesReranker
 from src.langchain.retriever.bm25 import chroma2bm25
 from src.langchain.utils.image import is_base64
-from src.utils.unigpt import GPT, extract_content_outside_think
+from src.utils.gpt import GPT, extract_content_outside_think
 from src.langchain.utils.rerank import add_to_final_results
 from src.RAGAnything.kg import KG
 
@@ -65,9 +65,9 @@ class RAGModels(object):
             self.kg = None
 
         if project_config.GENERATE_MODEL_NAME.startswith("azure"):
-            self.qa_agent = GPT(model=project_config.GENERATE_MODEL_NAME, vendor="azure", stream=False, temperature=0.1)
+            self.qa_agent = GPT(model=project_config.GENERATE_MODEL_NAME)
         elif project_config.GENERATE_MODEL_NAME.startswith("Qwen"):
-            self.qa_agent = OpenAI(api_key=project_config.API_KEY, base_url=project_config.QWEN3_VL_BASE_URL)
+            self.qa_agent = OpenAI(api_key=project_config.LLM_MODEL_API_KEY, base_url=project_config.QWEN3_VL_BASE_URL)
         else:
             self.qa_agent = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url=os.getenv("OPENAI_BASE_URL"))
 
