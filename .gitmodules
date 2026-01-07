@@ -1,0 +1,3 @@
+[submodule "eval/third_party/MMLongBench"]
+	path = eval/third_party/MMLongBench
+	url = https://github.com/mayubo2333/MMLongBench-Doc.git
