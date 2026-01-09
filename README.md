@@ -308,3 +308,10 @@ conda run -n bayesrag --live-stream python ./eval/mmLongBench/test_mmLongBench.p
 # or
 # conda run -n bayesrag --live-stream python ./eval/DocBench/test_DocBench.py
 ```
+
+Then, you can run the following command to evaluate the performance:
+
+```bash
+python ./eval/count_result/count_docbench.py
+python ./eval/count_result/count_mmlongbench.py
+```
