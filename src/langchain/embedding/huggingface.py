@@ -16,12 +16,14 @@ from loguru import logger
 class QwenEmbedding:
 
     def __init__(
-        self, database=f"{project_config.DATA_ROOT}/projects/MRAG3.0/database/th_text_db", collection_name="text"
+        self, database=f"{project_config.project_root}/database/th_text_db", collection_name="text"
     ):  # text_db
         model_kwargs = {"device": f"{project_config.EMBEDDING_CUDA_DEVICE}"}
         encode_kwargs = {"normalize_embeddings": False}
         self.embedding_model = HuggingFaceEmbeddings(
-            model_name=f"{project_config.DATA_ROOT}/models/{project_config.EMBEDDING_MODEL_NAME}",
+            model_name=os.getenv(
+                "EMBEDDING_MODEL_PATH", f"{project_config.DATA_ROOT}/models/{project_config.EMBEDDING_MODEL_NAME}"
+            ),
             model_kwargs=model_kwargs,
             encode_kwargs=encode_kwargs,
         )
@@ -58,7 +60,7 @@ class QwenEmbedding:
 class VllmEmbedding:
 
     def __init__(
-        self, database=f"{project_config.DATA_ROOT}/projects/MRAG3.0/database/th_text_db", collection_name="text"
+        self, database=f"{project_config.project_root}/database/th_text_db", collection_name="text"
     ):  # text_db
         self.embedding_model = OpenAIEmbeddings(
             base_url=project_config.EMBEDDING_BASE_URL_VEC, model=project_config.EMBEDDING_MODEL_NAME.split("vllm-")[1], api_key="None"  # type: ignore

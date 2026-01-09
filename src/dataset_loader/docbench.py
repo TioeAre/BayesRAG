@@ -12,7 +12,7 @@ from pypdf import PdfReader
 
 class dataset:
     def __init__(self) -> None:
-        self.root_dir = f"{project_config.DATA_ROOT}/projects/MRAG3.0/dataset/DocBench"
+        self.root_dir = f"{project_config.project_root}/dataset/DocBench"
 
     def read_dataset(self) -> list:
         temp_data = []
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     # logger.info(datas[-1])
     # logger.info(len(datas))  # 1091 qas, 136 docs
     # new_list = random.sample(datas, 30)
-    # with open(f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/DocBench/test_dataset.json", "w") as f:
+    # with open(f"{project_config.project_root}/eval/DocBench/test_dataset.json", "w") as f:
     #     json.dump(new_list, f, ensure_ascii=False, indent=2)
-    # with open(f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/DocBench/full_dataset.json", "w") as f:
+    # with open(f"{project_config.project_root}/eval/DocBench/full_dataset.json", "w") as f:
     #     json.dump(datas, f, ensure_ascii=False, indent=2)

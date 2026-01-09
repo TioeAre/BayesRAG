@@ -42,9 +42,7 @@ import uuid
 # Traceloop.init(disable_batch=True)
 
 
-def read_dataset(
-    full=True, sample_path=f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/mmLongBench/test_dataset.json"
-):
+def read_dataset(full=True, sample_path=f"{project_config.project_root}/eval/mmLongBench/test_dataset.json"):
     if full:
         dataset = Dataset()
         dataset_info = dataset.read_dataset()
@@ -63,7 +61,7 @@ async def extract_answer(question, output) -> str:
         timeout=3600,
     )
     with open(
-        f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/mmLongBench/prompt_for_answer_extraction.md",
+        f"{project_config.project_root}/eval/mmLongBench/prompt_for_answer_extraction.md",
         "r",
     ) as f:
         prompt = f.read()
@@ -334,7 +332,7 @@ async def main():
 
         for pdf_name in pdf_names:
             pdf_path = os.path.join(
-                f"{project_config.DATA_ROOT}/projects/MRAG3.0/dataset/MMLongBench-Doc/documents",
+                f"{project_config.project_root}/dataset/MMLongBench-Doc/documents",
                 pdf_name,
             )
             retry_count = 0
@@ -359,11 +357,9 @@ async def main():
         return
 
     if project_config.RESULT_DIR_NAME == "timestamp":
-        base_output_dir = f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/mmLongBench/results/{timestamp}"
+        base_output_dir = f"{project_config.project_root}/eval/mmLongBench/results/{timestamp}"
     else:
-        base_output_dir = (
-            f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/mmLongBench/results/{project_config.RESULT_DIR_NAME}"
-        )
+        base_output_dir = f"{project_config.project_root}/eval/mmLongBench/results/{project_config.RESULT_DIR_NAME}"
 
     faild_idx = []
     faild_path = f"{project_config.project_root}/eval/count_result/mmlongbench_failed_case_study.json"

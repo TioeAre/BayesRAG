@@ -12,7 +12,9 @@ from loguru import logger
 from transformers import AutoTokenizer
 
 # from traceloop.sdk.decorators import workflow, task
-tokenizer = AutoTokenizer.from_pretrained(f"{project_config.DATA_ROOT}/models/bge-reranker-v2-m3")
+tokenizer = AutoTokenizer.from_pretrained(
+    os.getenv("RERANK_MODEL_PATH", f"{project_config.DATA_ROOT}/models/{project_config.RERANK_MODEL_NAME}")
+)
 
 
 class VLLMRemoteCrossEncoder(BaseModel, BaseCrossEncoder):

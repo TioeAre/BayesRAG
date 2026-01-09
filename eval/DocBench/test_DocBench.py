@@ -69,7 +69,7 @@ Evaluation Form (score ONLY):
 
 
 def read_dataset(
-    full: bool = True, sample_path: str = f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/DocBench/test_dataset.json"
+    full: bool = True, sample_path: str = f"{project_config.project_root}/eval/DocBench/test_dataset.json"
 ):
     if full:
         dataset = Dataset()
@@ -236,7 +236,7 @@ async def main():
             if doc_id in processed_ids:
                 continue
             pdf_path = os.path.join(
-                f"{project_config.DATA_ROOT}/projects/MRAG3.0/dataset/DocBench/{folder_id}",
+                f"{project_config.project_root}/dataset/DocBench/{folder_id}",
                 doc_id,
             )
             if not os.path.exists(pdf_path):
@@ -262,11 +262,9 @@ async def main():
         return
 
     if project_config.RESULT_DIR_NAME == "timestamp":
-        base_output_dir = f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/DocBench/results/{timestamp}"
+        base_output_dir = f"{project_config.project_root}/eval/DocBench/results/{timestamp}"
     else:
-        base_output_dir = (
-            f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/DocBench/results/{project_config.RESULT_DIR_NAME}"
-        )
+        base_output_dir = f"{project_config.project_root}/eval/DocBench/results/{project_config.RESULT_DIR_NAME}"
 
     faild_idx = []
     faild_path = f"{project_config.project_root}/eval/count_result/docbench_failed_case_study.json"

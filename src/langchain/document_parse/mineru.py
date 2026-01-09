@@ -299,6 +299,7 @@ if project_config.ADD_VECTOR:
             pass
 
     class MinerULoader(BaseLoader):
+
         def __init__(
             self,
             file_path: str,
@@ -310,7 +311,7 @@ if project_config.ADD_VECTOR:
             server_url=None,
             start_page_id: int = 0,
             end_page_id=None,
-            parse_result_dir=f"{project_config.DATA_ROOT}/projects/MRAG3.0/storge/mineru",
+            parse_result_dir=f"{project_config.project_root}/storge/mineru",
         ) -> None:
             """Initialize the loader with a file path.
 
@@ -892,7 +893,7 @@ Focus on providing accurate, only return a brief visual caption that would be us
             return caption
 
         def draw_caption_in_image(self, caption: str, base64image: str) -> str:
-            # tmp_dir: str = f"{project_config.DATA_ROOT}/projects/MRAG3.0/tmp"
+            # tmp_dir: str = f"{project_config.project_root}/tmp"
             try:
                 if "," in base64image:
                     base64_data = base64image.split(",")[1]

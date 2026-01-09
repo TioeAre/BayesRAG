@@ -71,7 +71,7 @@ class PEEmbedding:
 
     def __init__(
         self,
-        database=f"{project_config.DATA_ROOT}/projects/MRAG3.0/database/image_db",
+        database=f"{project_config.project_root}/database/image_db",
         collection_name="image",
         embedding_model=None,
     ):
@@ -80,8 +80,11 @@ class PEEmbedding:
             self.embedding_model = embedding_model
         else:
             self.embedding_model = OpenCLIPEmbedding(
-                model_name="PE-Core-bigG-14-448",
-                checkpoint=f"{project_config.DATA_ROOT}/models/{project_config.IMAGE_EMBEDDING_MODEL_NAME}/open_clip_pytorch_model.bin",
+                model_name=project_config.IMAGE_EMBEDDING_MODEL_NAME,
+                checkpoint=os.getenv(
+                    "IMAGE_EMBEDDING_MODEL_PATH",
+                    f"{project_config.DATA_ROOT}/models/{project_config.IMAGE_EMBEDDING_MODEL_NAME}/open_clip_pytorch_model.bin",
+                ),
                 device=f"{project_config.IMAGE_EMBEDDING_CUDA_DEVICE}",
                 **model_kwargs,
             )
@@ -92,7 +95,7 @@ class PEEmbedding:
         self.retriever_embd = self.vectorstore_embd.as_retriever()
 
     def add_image_to_vectorstore(
-        self, image_documents: List[Document], tmp_dir: str = f"{project_config.DATA_ROOT}/projects/MRAG3.0/tmp"
+        self, image_documents: List[Document], tmp_dir: str = f"{project_config.project_root}/tmp"
     ):
         if not image_documents:
             return
@@ -152,5 +155,5 @@ class PEEmbedding:
 if __name__ == "__main__":
     image_embedding = PEEmbedding()
     # image_embedding.add_image_to_vectorstore(
-    # f"{project_config.DATA_ROOT}/projects/MRAG3.0/storge/mineru/3M_2018_10K/auto/images"
+    # f"{project_config.project_root}/storge/mineru/3M_2018_10K/auto/images"
     # )

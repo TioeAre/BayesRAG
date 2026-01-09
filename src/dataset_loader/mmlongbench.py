@@ -9,7 +9,7 @@ from loguru import logger
 
 class dataset:
     def __init__(self) -> None:
-        self.root_dir = f"{project_config.DATA_ROOT}/projects/MRAG3.0/dataset/MMLongBench-Doc"
+        self.root_dir = f"{project_config.project_root}/dataset/MMLongBench-Doc"
 
         self.data_path = os.path.join(self.root_dir, "data", "train-00000-of-00001.parquet")
         self.doc_dir = os.path.join(self.root_dir, "documents")
@@ -57,5 +57,5 @@ if __name__ == "__main__":
     logger.info(datas[-1])
     logger.info(len(datas))   # 1091 qas, 136 docs
     # new_list = random.sample(datas, 30)
-    with open(f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval/mmLongBench/full_dataset.json", "w") as f:
+    with open(f"{project_config.project_root}/eval/mmLongBench/full_dataset.json", "w") as f:
         json.dump(datas, f, ensure_ascii=False, indent=2)

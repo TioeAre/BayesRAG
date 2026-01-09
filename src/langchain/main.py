@@ -51,9 +51,9 @@ if __name__ == "__main__":
     pdf_name = test_data["qa"]["id"]
     question = test_data["qa"]["question"]
     ground_truth = test_data["qa"]["ground_truth"]
-    pdf_path = os.path.join(f"{project_config.DATA_ROOT}/projects/MRAG3.0/dataset/MMLongBench-Doc/documents", pdf_name)
+    pdf_path = os.path.join(f"{project_config.project_root}/dataset/MMLongBench-Doc/documents", pdf_name)
     image_path = os.path.join(
-        f"{project_config.DATA_ROOT}/projects/MRAG3.0/storge/mineru", pdf_name.split(".pdf")[0], "auto", "images"
+        f"{project_config.project_root}/storge/mineru", pdf_name.split(".pdf")[0], "auto", "images"
     )
 
     document_lodaer = MinerULoader(file_path=pdf_path, table_enable=False)

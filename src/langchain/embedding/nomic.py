@@ -87,9 +87,7 @@ class NomicEmbeddings(Embeddings):
 
 class NomicEmbedding:
 
-    def __init__(
-        self, database=f"{project_config.DATA_ROOT}/projects/MRAG3.0/database/shortcut_db", collection_name="shortcut"
-    ):
+    def __init__(self, database=f"{project_config.project_root}/database/shortcut_db", collection_name="shortcut"):
         self.embedding_model = NomicEmbeddings(
             model_name=f"{project_config.SHORT_CUT_MODEL_NAME}",
         )
@@ -103,7 +101,7 @@ class NomicEmbedding:
         pdf_path,
         start_page=None,
         end_page=None,
-        tmp_dir=f"{project_config.DATA_ROOT}/projects/MRAG3.0/tmp",
+        tmp_dir=f"{project_config.project_root}/tmp",
     ):
         if not os.path.exists(pdf_path) or not os.path.isfile(pdf_path):
             logger.warning(f"exists return []")
@@ -156,7 +154,7 @@ class NomicEmbedding:
 
 
 if __name__ == "__main__":
-    test_file = f"{project_config.DATA_ROOT}/projects/MRAG3.0/dataset/MMLongBench-Doc/documents/3M_2018_10K.pdf"
+    test_file = f"{project_config.project_root}/dataset/MMLongBench-Doc/documents/3M_2018_10K.pdf"
     emb = NomicEmbedding()
     # emb.add_pdf_to_vectorstore(test_file)
 
@@ -166,7 +164,7 @@ if __name__ == "__main__":
     )
     # logger.info(results)
     base64_str = results[0][0].page_content
-    save_base64_image(base64_str, f"{project_config.DATA_ROOT}/projects/MRAG3.0/output1.jpg")
+    save_base64_image(base64_str, f"{project_config.project_root}/output1.jpg")
 
     # results = emb.vectorstore_embd.get()
     # logger.info("get")

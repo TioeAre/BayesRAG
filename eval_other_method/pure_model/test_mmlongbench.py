@@ -127,11 +127,9 @@ async def main():
     timestamp = datetime.datetime.now().isoformat()
 
     if project_config.RESULT_DIR_NAME == "timestamp":
-        base_output_dir = (
-            f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval_other_method/pure_model/MMLongBench_results/{timestamp}"
-        )
+        base_output_dir = f"{project_config.project_root}/eval_other_method/pure_model/MMLongBench_results/{timestamp}"
     else:
-        base_output_dir = f"{project_config.DATA_ROOT}/projects/MRAG3.0/eval_other_method/pure_model/MMLongBench_results/{project_config.RESULT_DIR_NAME}"
+        base_output_dir = f"{project_config.project_root}/eval_other_method/pure_model/MMLongBench_results/{project_config.RESULT_DIR_NAME}"
 
     semaphore = asyncio.Semaphore(project_config.EVAL_CONCURRENCY_LIMIT)
     tasks = []

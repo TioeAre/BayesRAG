@@ -29,7 +29,9 @@ class BgeCrossEncoder(BaseModel, BaseCrossEncoder):
 
     def __init__(self, **kwargs: Any):
         super().__init__(**kwargs)
-        model_path = f"{project_config.DATA_ROOT}/models/{project_config.RERANK_MODEL_NAME}"
+        model_path = os.getenv(
+            "RERANK_MODEL_PATH", f"{project_config.DATA_ROOT}/models/{project_config.RERANK_MODEL_NAME}"
+        )
 
         if project_config.DEBUG:
             torch.cuda.reset_peak_memory_stats(device=f"{project_config.RERANK_CUDA_DEVICE}")

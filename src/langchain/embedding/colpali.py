@@ -72,7 +72,8 @@ class ColpaliEmbeddings(Embeddings):
 
 
 class ColpaliEmbedding:
-    def __init__(self, database=f"{project_config.DATA_ROOT}/projects/MRAG3.0/database/shortcut_db"):
+
+    def __init__(self, database=f"{project_config.project_root}/database/shortcut_db"):
         self.embedding_model = ColpaliEmbeddings(model_name="vidore/colqwen2.5-v0.2")
         self.vectorstore_embd = Chroma(
             collection_name="shortcut", embedding_function=self.embedding_model, persist_directory=database
@@ -112,7 +113,7 @@ class ColpaliEmbedding:
 
 
 if __name__ == "__main__":
-    test_file = f"{project_config.DATA_ROOT}/projects/MRAG3.0/dataset/MMLongBench-Doc/documents/3M_2018_10K.pdf"
+    test_file = f"{project_config.project_root}/dataset/MMLongBench-Doc/documents/3M_2018_10K.pdf"
     emb = ColpaliEmbedding()
     emb.add_pdf_to_vectorstore(test_file)
     # results = emb.vectorstore_embd.similarity_search_with_score("table", k=1)

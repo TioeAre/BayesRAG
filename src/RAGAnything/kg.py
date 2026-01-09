@@ -127,7 +127,7 @@ class KG(object):
             logger.info(f"{doc_uuid}, {document.metadata['source']}, {content['type']}, already inserted")
 
     async def add_pdf_kg(
-        self, pdf_path: str, start_page=None, end_page=None, tmp_dir=f"{project_config.DATA_ROOT}/projects/MRAG3.0/tmp"
+        self, pdf_path: str, start_page=None, end_page=None, tmp_dir=f"{project_config.project_root}/tmp"
     ):
         def chunked(iterable, n):
             for i in range(0, len(iterable), n):
