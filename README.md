@@ -1,5 +1,7 @@
 # BayesRAG: Probabilistic Mutual Evidence Corroboration for Multimodal Retrieval-Augmented Generation
 
+Paper Link: [BayesRAG: Probabilistic Mutual Evidence Corroboration for Multimodal Retrieval-Augmented Generation](https://arxiv.org/abs/2601.07329)
+
 ## System Overview
 
 ![framework](./assets/20260109_100720.png)
@@ -314,4 +316,18 @@ Then, you can run the following command to evaluate the performance:
 ```bash
 python ./eval/count_result/count_docbench.py
 python ./eval/count_result/count_mmlongbench.py
+```
+
+## Citation
+
+```bib
+@misc{li2026bayesrag,
+      title={BayesRAG: Probabilistic Mutual Evidence Corroboration for Multimodal Retrieval-Augmented Generation},
+      author={Xuan Li and Yining Wang and Haocai Luo and Shengping Liu and Jerry Liang and Ying Fu and Weihuang and Jun Yu and Junnan Zhu},
+      year={2026},
+      eprint={2601.07329},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2601.07329},
+}
 ```
