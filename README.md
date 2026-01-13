@@ -320,6 +320,8 @@ python ./eval/count_result/count_mmlongbench.py
 
 ## Citation
 
+If you find this work useful, you can cite our paper:
+
 ```bib
 @misc{li2026bayesrag,
       title={BayesRAG: Probabilistic Mutual Evidence Corroboration for Multimodal Retrieval-Augmented Generation},
